@@ -1,0 +1,847 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+  font-size: 20px;
+  font-weight: 600;
+   
+}
+html{
+  scroll-behavior: smooth;
+}
+.header {
+  width: 100vw;
+  height: 90px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  gap: 200px;
+  padding: 11px;
+  position: sticky;
+  left: 0;
+   top: 0;
+   z-index: 999;
+  
+   
+   
+  
+  
+   
+   
+}
+.header-item a::after{
+  content: '';
+  height: 2px;
+  width: 10px;
+  color: white;
+
+
+
+}
+.header-menu {
+  display: inline;
+}
+.header-item {
+  display: inline;
+}
+.header-item a {
+  text-decoration: none;
+  color:grey;
+}
+.header-button {
+  display: inline;
+}
+.header h1 {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
+.header span {
+  color: orange;
+   
+  text-align: center;
+  font-size: 40px;
+}
+.header-item:not(:last-child){
+    margin-right: 50px;
+}
+.header-item :hover{
+ color: white;
+ transition: 0.3s linear;
+ opacity: calc(70%);
+ cursor: pointer;
+}
+.header-button{
+  padding: 10px;
+  text-transform: capitalize;
+  border-radius: 5px;
+}
+.header-button:hover{
+  cursor: pointer;
+   border:2px solid orange;
+  outline:orange 3px solid;
+  transition: 0.3s linear;
+}
+.slide{
+  width:100vw;
+  height:100vh;
+  position: relative;
+   
+  background: url(https://wallpapercrafter.com/desktop/38784-Trebarwith-Strand-4k-4K-wallpaper-4K-England-travel-tourism-sunset-cliff-sea.jpg);
+   
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: slide 18s infinite;
+  
+   
+   
+   
+   
+    
+}
+ 
+.slide h1{
+  position: absolute;
+  z-index: 1;
+  font-size: 90px;
+   color:rgb(255, 255, 255);
+   font-family: "Permanent Marker", cursive;
+   font-weight: 400;
+  right: 600px;
+  margin-top: 80px;
+}
+ 
+.slide h2 span{
+  position: absolute;
+  z-index: 1;
+  font-size: 90px;
+   color:rgb(255, 255, 255);
+   text-transform:capitalize;
+   font-family: "Kavoon", serif;
+   font-weight: 400;
+   font-size: 50px;
+   right: 580px;
+   top: 140px;
+   margin-top: 60px;
+    
+      
+}
+.slide h3{
+  position: absolute;
+  z-index: 1;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+   color:rgb(255, 255, 255);
+   text-transform:capitalize;
+   font-size: 80px;
+   right: 550px;
+   top: 200px;
+   margin-top: 60px;
+}
+.slide .btn-slide{
+  position: absolute;
+   padding: 15px;
+   background-color: black;
+   border-radius: 15px;
+   top: 460px;
+   right:700px ;
+   outline: 4px solid transparent;
+    
+   border: none;
+    
+
+}
+.slide .btn-slide a{
+   
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+   
+
+}
+.btn-slide:hover{
+  background:none;
+  outline: 4px solid orange;
+    
+    transition: 0.3s linear;
+    
+     
+}
+.slide h1 span{
+  position: absolute;
+  z-index: 1;
+  font-size: 90px;
+   color:orange;
+   font-family: "Permanent Marker", cursive;
+   font-weight: 400;
+   right: 380px;
+   
+}
+.overlay{
+  position: fixed;
+  top: 150px;
+   left: 520px;
+  width: 450px;
+  height: 500px;
+  background: white;
+  z-index: 2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+   flex-direction: column;
+   gap: 30px;
+    display: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+     
+    
+    
+  
+}
+.cross{
+  position: fixed;
+  z-index: 999;
+   
+  top: 150px;
+  right: 470px;
+  cursor: pointer;
+  display: none;
+}
+.user{
+  margin-top: 30px;
+}
+#one{
+  margin-top: 70px;
+   
+}
+#two,#one{
+  width: 80%;
+  height: 50px;
+  border-radius: 25px;
+  outline: none;
+  border: 2px solid orange;
+  padding-left: 25px;
+  outline: 1px solid transparent;
+}
+#one::placeholder,#two::placeholder{
+   
+  font-size: medium;
+   
+
+}
+#one:focus,#two:focus{
+  outline:1px solid orange;
+   
+}
+.login-button{
+  margin-top: 50px;
+  display: flex;
+   gap: 70px;
+}
+.log-btn{
+  padding: 15px;
+  background-color: orange;
+   
+  border-radius: 25px;
+  border: none;
+}
+.log-btn a{
+  text-decoration: none;
+  color: white;
+}
+.open{
+  display:flex;
+  transition: 0.5s linear;
+  z-index: 999;
+}
+.fade{
+   z-index: 5;
+  opacity: 0.5;
+  transition: 0.5s linear;
+}
+.cross-open{
+  display: block;
+  transition: 0.5s linear;
+}
+.bookings{
+  background: url(https://images.creativemarket.com/0.1.0/ps/12744034/3640/2410/m1/fpnw/wm1/background6-.jpg?1657626145&s=3a3f9139c04b9d7bb19a12ddfc8eb4cd);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+   position: relative;
+}
+.bookings h1{
+  color: white;
+  font-weight: 600px;
+  position: absolute;
+  top: 40px;
+   left:550px;
+    
+}
+.bookings h1 span{
+   
+  padding: 15px;
+  width:50px;
+  height: 50px;
+  background-color: #f7b731 ;
+  font-size: 40px;
+  border-radius: 10px;
+  
+  
+}
+.bookings h1 span:not(:last-child){
+  margin-right: 10px;
+}
+.book{
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 600px;
+  height: 540px;
+  background-color: white;
+  z-index: 1;
+  top: 180px;
+  left: 510px;
+  padding: 30px;
+  border-radius: 10px;
+    
+  gap: 20px;
+   
+  
+}
+.book-label-heading{
+  color: #f7b731;
+}
+ .book-label:not(.book-label-heading){
+  color: #f7b731;
+  font-size: medium;
+
+}
+.book .book-date{
+   display: flex;
+   justify-content: space-evenly;
+}
+.book .tickets{
+  display: flex;
+  justify-content: space-even;
+}
+.btn-book{
+  position: absolute;
+  bottom: 25px;
+  left:240px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f7b731;
+  outline: 3px solid transparent;
+  border: none;
+}
+.btn-book {
+   
+  color: white;
+}
+.btn-book:hover{
+  outline: 3px solid #f7b731;
+  background-color: transparent;
+  color: #f7b731;
+   
+   
+}
+ 
+.book-input{
+  width: 90%;
+   padding: 10px;
+   height: 50px;
+   border-radius: 30px;
+   border:2px solid #f7b731;
+   outline: 1px solid transparent;
+   margin-left: 10px;
+}
+.book-input:focus{
+  outline: 1px solid #f7b731;
+}
+.book-input::placeholder{
+  font-size: medium;
+  color: gray;
+}
+.book-date{
+  margin-top: 20px;
+   display: flex;
+    gap: 40px;
+}
+.date-input{
+   width: 220px;
+   height: 50px;
+   padding: 10px;
+   border-radius: 30px;
+   margin-left: 10px;
+   border:2px solid #f7b731;
+   outline: 1px solid transparent;
+   color: gray;
+   font-size: medium;
+   user-select: text;
+     
+   
+}
+.date-input:focus{
+  outline: 1px solid #f7b731;
+}
+.date-input::selection{
+   background-color: #f7b731;
+   color: white;
+    
+}
+.tickets{
+  display: flex;
+  margin-top: 20px;
+  gap: 40px;
+  
+}
+.book-tickets{
+  width: 220px;
+   height: 50px;
+   padding: 10px;
+   border-radius: 30px;
+   margin-left: 10px;
+   border:2px solid #f7b731;
+   outline: 1px solid transparent;
+   color: #f7b731;
+   font-size: medium;
+   user-select: text;
+}
+.pakages{
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  position: relative;
+  display: flex;
+  
+}
+.pakages h1{
+  color: white;
+  font-weight: 600px;
+  position: absolute;
+  top: 40px;
+   left:550px;
+    
+}
+.pakages h1 span{
+   
+  padding: 15px;
+  width:50px;
+  height: 50px;
+  background-color: #f7b731 ;
+  font-size: 40px;
+  border-radius: 10px;
+  
+  
+}
+.pakages h1 span:not(:last-child){
+  margin-right: 10px;
+}
+.pakages-container{
+  display: flex;
+   position: absolute;
+   width: 100%;
+  height: 600px;
+      
+  top: 150px;
+  gap: 50px;
+  
+   overflow-x: auto;
+   transition: 0.5s linear;
+    
+}
+ .pakages-img {
+  position:relative;
+   width: 350px;
+   height: 500px;
+   background-color: white;
+   top: 50px;
+   left: 50px;
+   border-radius: 10px;
+   display: flex;
+   flex-shrink: 0;
+   cursor: pointer;
+    
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+   
+ }
+ .pakages-img:hover{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ }
+ .pakages-img img{
+  position: absolute;
+  width: 100%;
+  height: 230px;
+  border-radius: 10px 10px 0 0;
+  
+ }
+ .pakages-img h1{
+
+  position: absolute;
+  top: 250px;
+  left: 10px;
+  color: black;
+  font-weight: 600;
+  padding: 10px;
+ }
+ .pakages-img p{
+
+  position: absolute;
+  top: 300px;
+  left: 10px;
+  color: black;
+  font-size:20px; 
+  font-weight: 300;
+  
+   
+   
+ }
+ .pakages-img h2{
+
+  position: absolute;
+  top: 370px;
+  left: 20px;
+  color: black;
+  font-size:20px; 
+  font-weight: 300;
+  
+   
+   
+ }
+ .pakages-img h2 i:not(:last-child){
+  margin-right: 5px;
+ }
+ .pakages-img h3{
+
+  position: absolute;
+  top: 400px;
+  left: 10px;
+  color: black;
+  font-size:20px; 
+  font-weight: 300;
+  
+   
+   
+ }
+ .pakages-img button{
+
+  position: absolute;
+  top: 440px;
+  left: 10px;
+  color: white;
+  background-color: #f7b731;
+  font-size:20px; 
+  font-weight: 300;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 5px;
+  
+   
+   
+ }
+ .pakages-img button:hover{
+  background-color: transparent;
+  color: #f7b731;
+  border: 3px solid #f7b731;
+ }
+ .review{
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  position: relative;
+ }
+ .review h1{
+  color: white;
+  font-weight: 600px;
+  position: absolute;
+  top: 50px;
+   left:550px;
+    
+}
+.review h1 span{
+   
+  padding: 15px;
+  width:50px;
+  height: 50px;
+  background-color: #f7b731 ;
+  font-size: 40px;
+  border-radius: 10px;
+  
+  
+}
+.review h1 span:not(:last-child){
+  margin-right: 10px;
+}
+.review-container{
+  position: relative;
+ top: 150px;
+  width: 100%;
+  height: 600px;
+   
+  display: flex;
+  overflow-x: scroll;
+  flex-shrink: 0;
+   
+  gap: 40px;
+}
+.review-box{
+  position: relative;
+  left: 50px;
+  width: 420px;
+  height: 450px;
+  top: 40px;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.review-box img{
+  position: absolute;
+  width: 80%;
+  height: 300px;
+  border-radius: calc(50%);
+  border: 3px solid #f7b731;
+   margin: 30px;
+}
+.review-box p{
+  position: absolute;
+   
+   top: 350px;
+   left: 10px;
+   color: black;
+   font-size: smaller;
+   font-weight: 300;
+   padding: 5px;
+}
+.review-box:hover{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.contact{
+  background: url(https://wallpaperaccess.com/full/3124541.png);
+  width: 100vw;
+  height: 800px;
+  position: relative;
+  display: flex;
+   
+}
+.contact h2{
+  position: absolute;
+  color: white;
+  font-weight: 400;
+  font-size: 50px;
+  top: 100px;
+  left: 200px;
+  letter-spacing: 2px;
+}
+.contact p{
+  position: absolute;
+  color: white;
+  font-weight: 300;
+  font-size: 30px;
+  top: 170px;
+  left: 200px;
+
+}
+.contact h1{
+  position: absolute;
+  color:#f7b731;
+  font-weight: 350;
+  font-size: 70px;
+  top: 250px;
+  left: 200px;
+}
+.contact-container{
+  position: relative;
+   top: 360px;
+  left: 500px;
+  width: 65vw;
+  height: 420px;
+   
+  display: flex;
+   
+}
+.contact-box{
+  position:relative;
+  width: 450px;
+  height:100%;
+  background-color: white;
+  border-radius: 10px ;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+}
+.contact-box1{
+  position:relative;
+  width: 450px;
+  height:100%;
+  background-color: white;
+  border-radius: 10px ;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  left: 520px;
+   
+}
+.contact-box h2{
+  position: absolute;
+  color: black;
+  font-size:25px;
+  font-weight: 600;
+  top: 130px;
+   left: 160px;
+}
+.contact-box h1{
+  position: absolute;
+  top: 15px;
+  text-align: center;
+    
+}
+.contact-box p{
+  position: absolute;
+  top: 180px;
+   left: 15px;
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 15px;
+  
+  
+}
+.contact-box h3{
+  position: absolute;
+  top: 260px;
+   left: 110px;
+  color:#f7b731;
+  font-weight: 600;
+  font-size: 30px;
+  
+  
+  
+}
+.social{
+   position: absolute;
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+   
+  
+   
+}
+.social .one{
+  font-size:40px;
+  position: absolute;
+   top: 320px;
+   padding: 10px;
+   left: 130px;
+   
+   
+  
+}
+.social .two{
+  font-size:40px;
+  position: absolute;
+   top: 320px;
+   padding: 10px;
+   left: 210px;
+   
+   
+  
+}
+.social .three{
+  font-size:40px;
+  position: absolute;
+   top: 320px;
+   padding: 10px;
+   left: 280px;
+   
+   
+  
+}
+.contact-box1 i{
+  position: absolute;
+  left: 200px;
+  top: 40px;
+}
+.contact-box1 p{
+  padding: 5px;
+}
+.contact-box1 .btn-contact{
+  position: absolute;
+  top: 320px;
+  left: 130px;
+  padding: 15px;
+  border: 3px solid transparent;
+  color: white;
+  font-weight: 600;
+  background-color: #f7b731;
+
+}
+.btn-contact:hover{
+        cursor: pointer;
+        background-color: transparent;
+        color: #f7b731;
+        border:  3px solid #f7b731;
+}
+.blur{
+  filter: blur(5px);
+}
+.no-blur{
+  filter: none;
+}
+ 
+
+
+  
+ @keyframes slide{
+   
+   
+  20%{
+    background: url(https://i.pinimg.com/originals/f7/13/43/f7134356b960b269524c9f95487d7db6.jpg);
+    background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s linear;
+  
+  }
+  40%{
+  
+    background: url(https://wallpaperaccess.com/full/1510481.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 1s linear;
+  }
+
+  60%{
+    background: url(https://wallpaperaccess.com/full/1431622.jpg);
+    background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s linear;
+  
+  }
+  80%{
+    background: url(https://wallpaperaccess.com/full/1431673.jpg);
+    background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s linear;
+  
+  }
+  100%{
+  background: url(https://wallpapercrafter.com/desktop/38784-Trebarwith-Strand-4k-4K-wallpaper-4K-England-travel-tourism-sunset-cliff-sea.jpg);
+   
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s linear;
+  }
+ }
